@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+			.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		</style>
+		<script>
+				var title = "家的味道";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+								<span class="dropmenu">家禽類菜色</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li><a href="homecooking.html">招牌推薦</a></li>
+								<li><a href="homecooking02.html">肉類菜色</a></li>
+								<li><a href="homecooking03.html">家禽類菜色</a></li>
+								<li><a href="homecooking04.html">海鮮類菜色</a></li>
+								<li><a href="homecooking05.html">素食</a></li>
+								<li><a href="homecooking06.html">涼拌菜</a></li>
+								<li><a href="homecooking07.html">精緻小菜</a></li>
+								<li><a href="homecooking08.html">湯品</a></li>
+								<li><a href="homecooking09.html">點心糕點</a></li>
+								<li><a href="homecooking10.html">饅頭包點</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div id="app" class="maincontent dishbg">
+					<div class="title">
+						家的味道<span>家禽類菜色</span>
+					</div>
+					<div class="yahoo_mo">
+						<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon_mo.png" alt=""></a>
+					</div>
+					<div class="dish">
+						<div v-for="dish in dishes" class="dishbox">
+							<div class="dishpic">
+								<img :src="dish.pic" alt="">
+							</div>
+							<div class="title">
+								{{dish.name}}
+							</div>
+							<div class="description">
+								{{dish.des}}
+							</div>
+						</div>
+					</div>
+					<div class="topbtn">
+						回最上
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.2/vue.min.js"></script>
+		<script>
+			var dishdata = [
+				{
+					pic: "images/homecooking/chicken_duck/homecooking_pic_01.jpg",
+					name: "左宗棠雞丁",
+					des: "採用CAS去骨雞腿肉，搭配乾辣椒及三星蔥香氣十足，口感佳。"
+				},{
+					pic: "images/homecooking/chicken_duck/homecooking_pic_02.jpg",
+					name: "三杯雞",
+					des: "採用腿部及翅膀切成三等份，加上醬油、麻油、米酒及糖蒜頭及九層塔製成，香氣十足。"
+				},{
+					pic: "images/homecooking/chicken_duck/homecooking_pic_03.jpg",
+					name: "冰糖醬鴨",
+					des: "郭董婚宴指定菜色之一，堅持傳統手工製作，過程費工繁瑣，慢火滷煮三小時以上，讓鴨肉充分吸收老滷醬汁的香氣。"
+				},{
+					pic: "images/homecooking/chicken_duck/homecooking_pic_04.jpg",
+					name: "醬雞腿",
+					des: "最受到大朋友、小朋友們歡迎的醬雞腿，肉質香嫩好吃，無論是當主菜或當點心，都極為合適。"
+				},{
+					pic: "images/homecooking/chicken_duck/homecooking_pic_05.jpg",
+					name: "鹽水雞腿",
+					des: "選用CAS標章的優質雞腿，加上些許鹽巴醃製，凸顯出肉質天然的甜味，健康、不鹹、不優膩，吃來鮮嫩爽口。"
+				},{
+					pic: "images/homecooking/chicken_duck/homecooking_pic_06.jpg",
+					name: "鹹水雞",
+					des: "選用CAS標章的優質全雞，加上些許鹽巴醃製，凸顯出肉質天然的甜味，健康、不鹹、不優膩，吃來鮮嫩爽口。"
+				}
+			];
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					dishes: dishdata
+				}
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('.topbtn').click(function(event) {
+					$('html,body').animate({scrollTop: 0}, 1000);
+				});
+			});
+		</script>
+	</body>
+</html>

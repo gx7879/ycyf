@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script>
+				var title = "聯絡我們";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+								<span class="dropmenu">聯絡我們</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li><a href="contact.html">聯絡我們</a></li>
+								<li><a href="privacy.html">隱私權政策</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="maincontent store">
+					<div class="titlecolumn">
+						<div class="title">
+							聯絡我們
+						</div>
+						<div class="backto">
+							<div class="notic">
+								有標示「<span>＊</span>」為必填資料
+							</div>
+							<a href="privacy.html">
+								隱私權政策
+							</a>
+						</div>
+					</div>
+					<div class="contact">
+						<form action="contact_submit" method="get" accept-charset="utf-8">
+							<div class="single">
+								<div class="item">聯絡人<span class="require">＊</span></div>
+								<svg><polygon fill="#920683" points="0,0 0,13 11,6.5"/></svg>
+								<input type="text" name="" required="required">
+							</div>
+							<div class="single inputarea">
+								<div class="between">
+									<div class="item">聯絡電話</div>
+									<svg><polygon fill="#920683" points="0,0 0,13 11,6.5"/></svg>
+									<input type="tel" pattern="[0][9][0-9]{8}" name="">
+								</div>
+								<div class="between">
+									<div class="item">傳真號碼</div>
+									<svg><polygon fill="#920683" points="0,0 0,13 11,6.5"/></svg>
+									<input type="tel" name="">
+								</div>
+							</div>
+							<div class="single full">
+								<div class="item">e-Mail<span class="require">＊</span></div>
+								<svg><polygon fill="#920683" points="0,0 0,13 11,6.5"/></svg>
+								<input type="email" name="" required="required">
+							</div>
+							<div class="single full">
+								<div class="item">聯絡地址</div>
+								<svg><polygon fill="#920683" points="0,0 0,13 11,6.5"/></svg>
+								<input type="text" name="" required="required">
+							</div>
+							<div class="text">
+								<div class="item">歡迎留下您的寶貴意見</div>
+								<svg><polygon fill="#920683" points="0,0 0,13 11,6.5"/></svg>
+								<textarea name="" rows="10"></textarea>
+							</div>
+							<div class="btnarea">
+								<button type="sbmit"><img src="images/submitbtn.png" alt=""></button>
+								<button type="reset"><img src="images/resetbtn.png" alt=""></button>
+							</div>
+							
+						</form>
+					</div>
+					
+					
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

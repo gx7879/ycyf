@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>歡迎光臨</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script>
+				var title = "億長御坊";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "歡迎光臨 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrap main">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<div class="desktop">
+					<img src="images/welcomepage.jpg" alt="">
+				</div>
+				<div class="mobile">
+					<img src="images/welcomepage_mo.jpg" alt="">
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+			.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		</style>
+		<script>
+				var title = "家的味道";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+								<span class="dropmenu">素食</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li><a href="homecooking.html">招牌推薦</a></li>
+								<li><a href="homecooking02.html">肉類菜色</a></li>
+								<li><a href="homecooking03.html">家禽類菜色</a></li>
+								<li><a href="homecooking04.html">海鮮類菜色</a></li>
+								<li><a href="homecooking05.html">素食</a></li>
+								<li><a href="homecooking06.html">涼拌菜</a></li>
+								<li><a href="homecooking07.html">精緻小菜</a></li>
+								<li><a href="homecooking08.html">湯品</a></li>
+								<li><a href="homecooking09.html">點心糕點</a></li>
+								<li><a href="homecooking10.html">饅頭包點</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div id="app" class="maincontent dishbg">
+					<div class="title">
+						家的味道<span>素食</span>
+					</div>
+					<div class="yahoo_mo">
+						<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon_mo.png" alt=""></a>
+					</div>
+					<div class="dish">
+						<div v-for="dish in dishes" class="dishbox">
+							<div class="dishpic">
+								<img :src="dish.pic" alt="">
+							</div>
+							<div class="title">
+								{{dish.name}}
+							</div>
+							<div class="description">
+								{{dish.des}}
+							</div>
+						</div>
+					</div>
+					<div class="topbtn">
+						回最上
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.2/vue.min.js"></script>
+		<script>
+			var dishdata = [
+				{
+					pic: "images/homecooking/vegetarian/homecooking_pic_01.jpg",
+					name: "雪菜百頁（素）",
+					des: "非基改豆皮百頁較為軟嫩新鮮雪菜清脆爽口。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_02.jpg",
+					name: "素什錦（素）",
+					des: "新鮮筍子非基改豆干、豆芽(黃豆芽)、芹菜、紅蘿蔔絲、黑木耳、金針、香菇、客家酸菜、甜椒，含有豐富纖維，清爽又健康，不油膩。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_03.jpg",
+					name: "茼蒿（素）",
+					des: "採用非基改豆干，新鮮當季茼蒿，燙後切碎拌再一起，清爽可口。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_04.jpg",
+					name: "酸菜蠶豆（素）",
+					des: "緊密的蠶豆搭配酸脆適中的酸菜，炒後有者淡淡的蠶豆香氣和細綿口感中帶糯軟糯細膩。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_05.jpg",
+					name: "紅燒烤麩（素）",
+					des: "使用新鮮筍子、黑木耳、香菇及烤麩紅燒而成、口感Q軟。P.S 烤麩不是豆干、是麵筋類，從麵粉洗出來的筋（如中筋、低筋）"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_06.jpg",
+					name: "香菇素火腿（素）",
+					des: "採用非基改豆皮、香菇絲和麻油。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_07.jpg",
+					name: "九重川耳（素）",
+					des: "取個雲耳是黑木耳的種含有豐富膳食纖維、多醣體等成分、熱量低。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_08.jpg",
+					name: "油悶筍（素）",
+					des: "採用當季竹筍（麻筍）取用最精華最嫩部位加上香菇紅燒口感極佳。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_09.jpg",
+					name: "原味心太軟（素）",
+					des: "採用上等新疆紅棗和麻糬製成，特別選用皮薄肉厚籽小甜度高的上等紅棗手工去籽，鑲入麻糬內餡。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_10.jpg",
+					name: "芋泥心太軟（素）",
+					des: "採用上等新疆紅棗和麻糬製成，特別選用皮薄肉厚籽小甜度高的上等紅棗手工去籽，鑲入獨家首創的芋泥內餡。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_11.jpg",
+					name: "冰糖蓮藕",
+					des: "極品甜點，蓮藕內塞糯米，費工8小時才能煮好，QQ超好吃，藕汁可斟酌加，也可沖熱開水喝。本店來店必買之一。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_12.jpg",
+					name: "百香果青木瓜",
+					des: "新鮮青木瓜製成，加入百香果醬汁，酸酸甜甜，清脆爽口類似情人果口感。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_13.jpg",
+					name: "麻辣香鍋",
+					des: "嚴選多種類蔬食，呈現多層次的口感，鬆軟的馬鈴薯、Q彈的百頁豆腐、軟嫩的秋葵，顛覆了素食的口感想像。"
+				},{
+					pic: "images/homecooking/vegetarian/homecooking_pic_14.jpg",
+					name: "素炒四季豆",
+					des: "嚴選台灣鮮嫩四季豆，軟嫩口感，搭上鴻喜菇及蘿蔔乾的爽脆，微微的辣味，吃來鮮甜爽口，風味十足。"
+				}
+			];
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					dishes: dishdata
+				}
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('.topbtn').click(function(event) {
+					$('html,body').animate({scrollTop: 0}, 1000);
+				});
+			});
+		</script>
+	</body>
+</html>

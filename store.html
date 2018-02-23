@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+			.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		</style>
+		<script>
+			var title = "門市資訊";
+			var title_temp = "{{num}}";
+			var title_html = title_temp.replace('{{num}}', title);
+			document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+								<span class="dropmenu">南門市場創始店</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#a1">南門市場創始店</a></li>
+								<li><a href="#a2">板橋大遠百店</a></li>
+								<li><a href="#a3">新光三越站前店</a></li>
+								<li><a href="#a4">新光三越信義A11</a></li>
+								<li><a href="#a5">新光三越信義A4</a></li>
+								<li><a href="#a6">新光三越天母店</a></li>
+								<li><a href="#a7">SOGO復興店</a></li>
+								<li><a href="#a8">台北101店</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="maincontent store">
+					<div class="title">
+						門市資訊
+					</div>
+					<div class="storeinfo">
+						<img src="images/storepic.png" alt="">
+						<div class="yahoo_mo">
+							<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon_mo.png" alt=""></a>
+						</div>
+						<div class="storeinfoarea">
+							<div id="a1" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											南門市場創始店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/nanmen.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												台北市中正區羅斯福路一段8號<br>(南門市場一樓187、189號攤位)
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												8:00~16:30（周一公休）
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-2393-0383
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="a2" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic01.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											板橋大遠百店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/banchiao.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												新北市板橋區新站路28號地下一樓
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												8:00~18:30（週一公休）
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-2958-1899
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="a3" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic01.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											新光三越台北站前店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/mitsukoshi_taipei.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												台北市中正區忠孝西路一段66號地下二樓
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												11:00~21:00
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-2388-2828
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="a4" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic01.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											新光三越信義A11店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/mitsukoshi_A11.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												台北市信義區松壽路11號地下二樓
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												11:00~21:30
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-2723-6263
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="a5" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic01.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											新光三越信義A4店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/mitsukoshi_A4.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												台北市信義區松高路19號地下二樓
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												11:00~21:30
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-2722-2990
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="a6" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic01.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											新光三越天母店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/mitsukoshi_tienmu.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												台北市士林區天母東路68號地下一樓
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												9:00~21:00
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-2874-7097
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="a7" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic01.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											SOGO復興店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/SOGO.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												台北市大安區忠孝東路三段300號地下三樓
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												11:00~21:30
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-8772-0608
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="a8" class="storeinfobox">
+								<div class="storepic">
+									<img src="images/store_pic01.jpg" alt="">
+								</div>
+								<div class="storecontactinfo">
+									<div class="topcolumn">
+										<div class="title">
+											台北101店
+										</div>
+										<div class="map" data-map="http://www.ycyf.com.tw/demo/images/taipei101.png">
+											<img src="images/mapicon.png" alt="">
+										</div>
+									</div>
+									<div class="bottomcolumn">
+										<div class="add">
+											<div class="info">
+												<span>門市地址 /</span>
+												台北市信義區市府路45號地下一樓
+											</div>
+										</div>
+										<div class="time">
+											<div class="info">
+												<span>營業時間 /</span>
+												9:00~21:00
+											</div>
+										</div>
+										<div class="tel">
+											<div class="info">
+												<span>連絡電話 /</span>
+												02-8101-8590
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="topbtn">
+							回最上
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$('.topbtn').click(function(event) {
+					$('html,body').animate({scrollTop: 0}, 1000);
+				});
+				var firstmappic = $('.map:eq(0)').data('map');
+				$('body').append('<div class="bigmap"><div class="layout"></div><img src="'+firstmappic+'"></div>');
+				$('.map img').click(function(event) {
+					var path = $(this).parent().data('map');
+					var scrolltop = $(window).scrollTop();
+					if(path.length>0){
+						$('.bigmap img').attr('src', path).parent().css({'display':'block','top': scrolltop});
+					}
+					
+					console.log(path);
+				});
+				$('.bigmap img').click(function(event) {
+
+					$(this).parent().css('display', 'none');
+
+				});
+			});
+		</script>
+	</body>
+</html>

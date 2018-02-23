@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+			.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		</style>
+		<script>
+				var title = "節慶美味";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="loadanimate">
+			<div class="loader">Loading...</div>
+		</div>
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+								<span class="dropmenu">各式粽子</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li><a href="festival.html">各式粽子</a></li>
+								<li><a href="festival02.html">年菜套餐</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div id="app" class="maincontent dishbg">
+					<div class="title">
+						節慶美味<span>各式粽子</span>
+					</div>
+					<div class="yahoo_mo">
+						<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon_mo.png" alt=""></a>
+					</div>
+					<div class="dish">
+						<div v-for="dish in dishes" class="dishbox">
+							<div class="dishpic">
+								<img :src="dish.pic" alt="">
+							</div>
+							<div class="title">
+								{{dish.name}}
+							</div>
+							<div class="description">
+								{{dish.des}}
+							</div>
+						</div>
+						<!-- <div class="dishbox">
+							<div class="dishpic">
+								<img src="images/dishpic.jpg" alt="">
+							</div>
+							<div class="title">
+								紹興醉活海蝦
+							</div>
+							<div class="description">
+								特別選用無菌海水培植的活蝦，先燙熟後再加入純濃紹興酒慢慢醃至入味，耗時數天，不加任何多餘的調味，原汁原味，肉質香甜。
+							</div>
+						</div>
+						<div class="dishbox">
+							<div class="dishpic">
+								<img src="images/dishpic.jpg" alt="">
+							</div>
+							<div class="title">
+								紹興醉活海蝦
+							</div>
+							<div class="description">
+								特別選用無菌海水培植的活蝦，先燙熟後再加入純濃紹興酒慢慢醃至入味，耗時數天，不加任何多餘的調味，原汁原味，肉質香甜。
+							</div>
+						</div>
+						<div class="dishbox">
+							<div class="dishpic">
+								<img src="images/dishpic.jpg" alt="">
+							</div>
+							<div class="title">
+								紹興醉活海蝦
+							</div>
+							<div class="description">
+								特別選用無菌海水培植的活蝦，先燙熟後再加入純濃紹興酒慢慢醃至入味，耗時數天，不加任何多餘的調味，原汁原味，肉質香甜。
+							</div>
+						</div>
+						<div class="dishbox">
+							<div class="dishpic">
+								<img src="images/dishpic.jpg" alt="">
+							</div>
+							<div class="title">
+								紹興醉活海蝦
+							</div>
+							<div class="description">
+								特別選用無菌海水培植的活蝦，先燙熟後再加入純濃紹興酒慢慢醃至入味，耗時數天，不加任何多餘的調味，原汁原味，肉質香甜。
+							</div>
+						</div>
+						<div class="dishbox">
+							<div class="dishpic">
+								<img src="images/dishpic.jpg" alt="">
+							</div>
+							<div class="title">
+								紹興醉活海蝦
+							</div>
+							<div class="description">
+								特別選用無菌海水培植的活蝦，先燙熟後再加入純濃紹興酒慢慢醃至入味，耗時數天，不加任何多餘的調味，原汁原味，肉質香甜。
+							</div>
+						</div> -->
+					</div>
+					<div class="topbtn">
+						回最上
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.2/vue.min.js"></script>
+		<script>
+			var dishdata = [
+				{
+					pic: "images/festival/zongzi/festival_pic_01.jpg",
+					name: "一口鹹粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_02.jpg",
+					name: "十穀養生豆沙粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_03.jpg",
+					name: "十穀養生香菇蛋黃肉粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_04.jpg",
+					name: "十穀養生鮮肉粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_05.jpg",
+					name: "心太軟粽-芋泥",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_06.jpg",
+					name: "北部台灣粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_07.jpg",
+					name: "東坡福菜粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_08.jpg",
+					name: "花生素粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_09.jpg",
+					name: "南部台灣粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_10.jpg",
+					name: "排骨酥粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_11.jpg",
+					name: "湖州火腿鮮肉粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_12.jpg",
+					name: "湖州豆沙粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_13.jpg",
+					name: "湖州香菇蛋黃鮮肉粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_14.jpg",
+					name: "湖州鮮肉粽",
+					des: ""
+				},{
+					pic: "images/festival/zongzi/festival_pic_15.jpg",
+					name: "紫米鮮肉粽",
+					des: ""
+				}
+			];
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					dishes: dishdata
+				},
+				created: function(){
+					$(".loadanimate").fadeOut("slow");
+				}
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('.topbtn').click(function(event) {
+					$('html,body').animate({scrollTop: 0}, 1000);
+				});
+			});
+		</script>
+	</body>
+</html>

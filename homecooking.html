@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+			.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		</style>
+		<script>
+				var title = "家的味道";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="loadanimate">
+			<div class="loader">Loading...</div>
+		</div>
+		
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="dropmenu">招牌推薦</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="homecooking.html">招牌推薦</a></li>
+								<li><a href="homecooking02.html">肉類菜色</a></li>
+								<li><a href="homecooking03.html">家禽類菜色</a></li>
+								<li><a href="homecooking04.html">海鮮類菜色</a></li>
+								<li><a href="homecooking05.html">素食</a></li>
+								<li><a href="homecooking06.html">涼拌菜</a></li>
+								<li><a href="homecooking07.html">精緻小菜</a></li>
+								<li><a href="homecooking08.html">湯品</a></li>
+								<li><a href="homecooking09.html">點心糕點</a></li>
+								<li><a href="homecooking10.html">饅頭包點</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div id="app" class="maincontent dishbg">
+					<div class="title">
+						家的味道<span>招牌推薦</span>
+					</div>
+					<div class="yahoo_mo">
+						<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon_mo.png" alt=""></a>
+					</div>
+					<div class="dish">
+						<div v-for="dish in dishes" class="dishbox">
+							<div class="dishpic">
+								<img :src="dish.pic" alt="">
+							</div>
+							<div class="title">
+								{{dish.name}}
+							</div>
+							<div class="description">
+								{{dish.des}}
+							</div>
+						</div>
+					</div>
+					<div class="topbtn">
+						回最上
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.2/vue.min.js"></script>
+		<script>
+			var dishdata = [
+				{
+					pic: "images/homecooking/chefs_special/homecooking_pic_01.jpg",
+					name: "魚香茄子",
+					des: "本公司自己絞的豬絞肉，微辣，下飯菜。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_02.jpg",
+					name: "北平丸子（小肉丸）",
+					des: "使用荸薺、蛋清、自製豬絞肉特製而成、絞肉以手工不間斷摔打至有彈性、口感一流。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_03.jpg",
+					name: "五更腸旺",
+					des: "鴨血、酸菜心、大腸、花椒，香氣十足，可當麻辣鍋底，加入金針菇、高麗菜、火鍋料，剩下的湯底可拌麵、拌飯及冬粉。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_04.jpg",
+					name: "芋泥心太軟",
+					des: "採用上等新疆紅棗和麻糬製成，特別選用皮薄肉厚籽小甜度高的上等紅棗手工去籽，鑲入獨家首創的芋泥內餡。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_05.jpg",
+					name: "原味心太軟",
+					des: "採用上等新疆紅棗和麻糬製成，特別選用皮薄肉厚籽小甜度高的上等紅棗手工去籽，鑲入麻糬內餡。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_06.jpg",
+					name: "牛三拼",
+					des: "以牛筋、牛肚、牛腱使用老滷汁滷到入味，在使用獨家醬汁涼拌而成。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_07.jpg",
+					name: "冰糖蓮藕",
+					des: "極品甜點，蓮藕內塞糯米，費工8小時才能煮好，QQ超好吃，藕汁可斟酌加，也可沖熱開水喝。本店來店必買之一。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_08.jpg",
+					name: "冰糖醬鴨",
+					des: "郭董婚宴指定菜色之一，堅持傳統手工製作，過程費工繁瑣，慢火滷煮三小時以上，讓鴨肉充分吸收老滷醬汁的香氣。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_09.jpg",
+					name: "豆瓣鯉魚",
+					des: "可切嫩豆腐連同豆瓣醬汁倒入跟鯉魚一起煮，起鍋前放入蔥花滾即可。（附一包豆瓣醬）"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_10.jpg",
+					name: "咕咾肉",
+					des: "使用梅花肉部位，口感酸甜，外酥內嫩，沒有骨頭，本店必買菜色。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_11.jpg",
+					name: "東坡潭子肉",
+					des: "招牌菜色之一，採用三層五花肉，榮獲傳統美食展比賽第一名，用老滷汁燉煮6小時而成。使用紅麴製成，風味獨特。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_14.jpg",
+					name: "荷葉排骨",
+					des: "特製蒸肉粉調料而成，子排口感嫩，保留傳統做法，並將現在顧客乃以接受的肥肉改成上等豬腩排，肉嫩而不膩，散發米香和荷葉香，風味獨特。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_15.jpg",
+					name: "蔥燒香魚",
+					des: "使用宜蘭三星蔥悶煮香魚肚內放豬絞肉，肉質細嫩，整吃可吃入味。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_16.jpg",
+					name: "蔥燒鯽魚",
+					des: "嚴選台灣鯽魚加上特級宜蘭三星蔥和天然糯米醋及百分百純釀造醬油製成的獨門滷汁，以小火慢燒至入味風味佳香氣溢人，鯽魚肚子鼓鼓有蛋比較香。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_17.jpg",
+					name: "花椒佛跳牆",
+					des: "高湯採用雞骨和豬骨，以炆火的方式燉煮20小時。排骨酥為特選的活力豬腩排精製而成。以天然食材散發出食材本身的香甜，不添加任何人工甘味。"
+				},{
+					pic: "images/homecooking/chefs_special/homecooking_pic_18.jpg",
+					name: "青椒灌肉(**食尚玩家 莎莎 推薦懶人美食**)",
+					des: "特別挑選牛角椒，切去頭尾，再去籽之後，塞入自製絞肉，以甜醋的方法製成，連郭董都御點為婚宴菜色。"
+				}
+			];
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					dishes: dishdata
+				},
+				created: function(){
+					$(".loadanimate").fadeOut("slow");
+				}
+			});
+			// $(window).load(function() {
+			// 	// Animate loader off screen
+			// 	$(".loadanimate").fadeOut("slow");
+			// });
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('.topbtn').click(function(event) {
+					$('html,body').animate({scrollTop: 0}, 1000);
+				});
+			});
+		</script>
+	</body>
+</html>

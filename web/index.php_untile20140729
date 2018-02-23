@@ -1,0 +1,190 @@
+<?PHP
+
+  include_once("_configs/db_include.php");
+
+
+
+
+
+  if (Empty($_SESSION['ycyf']['counter']['index']))
+
+    $_SESSION['ycyf']['counter']['index']="True"; //第一次進來,沒有SESSION為TRUE
+
+  else
+
+    $_SESSION['ycyf']['counter']['index']="FALSE"; //第二次以後進來,有SESSION為FALSE  //True 是灌水用的
+
+
+
+  if($_SESSION['ycyf']['counter']['index']="True"){
+
+  	$sql="update counter set pgcount=pgcount+1 where pgname='ycyf';";
+
+    myquery($sql);
+
+  }
+
+
+
+
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<title>億長御坊-中國傳統食品的播種者</title>
+<meta name="keywords" content="億長御坊, 熟食, 南門市場, 年菜, 億長御坊營業時間, 億長御坊佛跳牆, 南門市場億長御坊, 億長坊, 朱億長, 熟食食品, 熟食店, 冰糖蓮藕">
+<meta name="description" content="堅持手工現做，堅持不添加防腐劑，堅持用最好的食材，為了回報客人的熱情肯定與相挺支持，億長御坊的最大要求，就是挑剔與用心！ ">
+<meta name="robots" content="INDEX, FOLLOW">
+<script src="AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="AC_ActiveX.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+body {
+	background-color: #a43d36;
+	background-image: url(images/index_back.jpg);
+	background-repeat: repeat-x;
+	margin: 8px 0 0 0;
+	text-align:center;
+}
+#centerback {
+	background-image: url(images/index_centerback.jpg);
+	background-repeat: no-repeat;
+	height: 670px;
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+}
+table {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	line-height: 20px;
+}
+table a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	position:relative;
+	color: #FFFFCC;
+}
+
+.company a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #d09b96;
+	line-height: 20px;
+}
+#abgne_float_ad {
+	display: none;
+	position: absolute;
+	z-index:100;
+}
+#abgne_float_ad .abgne_close_ad {
+	display: block;
+	text-align: right;
+	cursor: pointer;
+	font-size: 12px;
+	background-image:url(images/book_bg.jpg);
+}
+#abgne_float_ad a img {
+	border: none;
+}
+div.bigDiv {
+	height: 1000px;
+}
+-->
+</style>
+<script type="text/javascript">
+	// 當網頁載入完
+	$(window).load(function(){
+	var $win = $(window),
+		$ad = $('#abgne_float_ad').css('opacity', 0).show(),	// 讓廣告區塊變透明且顯示出來
+		_width = $ad.width(),
+		_height = $ad.height(),
+		_diffY = 50, _diffX = 50,	// 距離右及下方邊距
+		_moveSpeed = 800;	// 移動的速度
+ 
+	// 先把 #abgne_float_ad 移動到定點
+	$ad.css({
+		top: $(document).height(),
+		left: $win.width() - _width - _diffX,
+		opacity: 1
+	});
+ 
+	// 幫網頁加上 scroll 及 resize 事件
+	$win.bind('scroll resize', function(){
+		var $this = $(this);
+ 
+		// 控制 #abgne_float_ad 的移動
+		$ad.stop().animate({
+			top: $this.scrollTop() + $this.height() - _height - _diffY,
+			left: $this.scrollLeft() + $this.width() - _width - _diffX
+		}, _moveSpeed);
+	}).scroll();	// 觸發一次 scroll()
+ 
+	// 關閉廣告
+	$('#abgne_float_ad .abgne_close_ad').click(function(){
+		$ad.hide();
+	});
+});
+</script>
+</head>
+<body>
+
+<div id="floatdiv" style="position:absolute; right:0px; top:0px; z-index:100;"><img src="images/dragon_run.gif" alt="億長御坊端午粽禮訂購活動" width="150" height="300" usemap="#Map" border="0">
+  <map name="Map" id="Map">
+    <area shape="rect" coords="3,18,147,117" href="http://www.shopping7.com.tw/food/Page_Orange.html" target="_blank" />
+    <area shape="rect" coords="3,119,147,208" href="http://tw.mall.yahoo.com/store/ycyf" target="_blank" />
+  </map>
+</div>
+<script type="text/javascript" src="floating_menu.js"></script>
+<div class="bigDiv" style="position:absolute"> </div>
+<div id="abgne_float_ad" > <span class="abgne_close_ad"><img src="images/book_close.jpg" width="111" height="23" /></span><a href="about_eventlist.html" target="_self"><img src="images/Central Kitchen.jpg" width="300" height="382" /></a> </div>
+<div id="centerback">
+  <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" valign="top"><script type="text/javascript">
+
+	AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0','width','950','height','522','src','images/index','quality','high','pluginspage','http://www.macromedia.com/go/getflashplayer','wmode','transparent','movie','images/index' ); //end AC code
+
+</script>
+        <noscript>
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="950" height="522">
+          <param name="movie" value="images/index.swf" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="transparent" />
+          <embed src="images/index.swf" width="950" height="522" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>
+        </object>
+      </noscript></td>
+    </tr>
+    <tr>
+      <td height="90" align="center" valign="middle"><table width="950" border="0" cellpadding="0" cellspacing="5">
+          <tr>
+            <td width="469" align="right"><img src="images/oilnote.jpg" alt="即將進駐" width="342" height="255" border="0" /></td>
+            <td width="466" align="left"><img src="images/bea.jpg" width="342" height="255" /></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><img src="images/newopen.png" alt="即將進駐" width="344" height="104" border="0" /></td>
+          </tr>
+        </table>
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="30" rowspan="2" align="left"><img src="images/footpic.gif" width="19" height="55" /></td>
+            <td colspan="2" align="center">| <a href="about.html">關於我們</a> | <a href="menu.html">菜色介紹</a> | <a href="appreciate.html">美食鑑賞</a> | <a href="branches.html">分店訊息</a> | <a href="news.html">媒體報導</a> | <a href="contact.php">聯絡我們</a> |<br />
+              南門店：台北市羅斯福路一段 (南門市場一樓內187、189號)</td>
+            <td width="30" rowspan="2" align="right"><img src="images/footpic.gif" width="19" height="55" /></td>
+          </tr>
+          <tr>
+            <td align="left"> 電話：02-23930383</td>
+            <td align="right" class="company"><a href="http://www.twinkle.com.tw/" target="_blank">Design by TWINKLE</a></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

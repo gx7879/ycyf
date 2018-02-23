@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+			.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		</style>
+		<script>
+				var title = "家的味道";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+								<span class="dropmenu">肉類菜色</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li><a href="homecooking.html">招牌推薦</a></li>
+								<li><a href="homecooking02.html">肉類菜色</a></li>
+								<li><a href="homecooking03.html">家禽類菜色</a></li>
+								<li><a href="homecooking04.html">海鮮類菜色</a></li>
+								<li><a href="homecooking05.html">素食</a></li>
+								<li><a href="homecooking06.html">涼拌菜</a></li>
+								<li><a href="homecooking07.html">精緻小菜</a></li>
+								<li><a href="homecooking08.html">湯品</a></li>
+								<li><a href="homecooking09.html">點心糕點</a></li>
+								<li><a href="homecooking10.html">饅頭包點</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div id="app" class="maincontent dishbg">
+					<div class="title">
+						家的味道<span>肉類菜色</span>
+					</div>
+					<div class="yahoo_mo">
+						<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon_mo.png" alt=""></a>
+					</div>
+					<div class="dish">
+						<div v-for="dish in dishes" class="dishbox">
+							<div class="dishpic">
+								<img :src="dish.pic" alt="">
+							</div>
+							<div class="title">
+								{{dish.name}}
+							</div>
+							<div class="description">
+								{{dish.des}}
+							</div>
+						</div>
+					</div>
+					<div class="topbtn">
+						回最上
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.2/vue.min.js"></script>
+		<script>
+			var dishdata = [
+				{
+					pic: "images/homecooking/meat/homecooking_pic_01.jpg",
+					name: "京都排骨",
+					des: "採用新鮮豬腩排醃製過後配上台灣小農制作的梅乾製成，風味獨特，沒有骨頭，口感嫩。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_02.jpg",
+					name: "粉蒸肉",
+					des: "搭配五花肉、蒸肉粉及地瓜，香氣十足，配飯超好吃。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_03.jpg",
+					name: "花生豬腳",
+					des: "採用活力豬的腳蹄和本地特選花生仁，口味香醇獨特，含有豐富的膠質，可拌麵拌飯，大人小孩都喜歡。花生綿密豬腳口感Q軟不油膩。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_04.jpg",
+					name: "蔥(火靠)子排",
+					des: "選用上等CAS活力豬肋排，肥瘦適中，搭配洋蔥及台灣宜蘭三星蔥慢火熬煮至少至少5個鐘頭而成，香氣十足。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_05.jpg",
+					name: "咕咾肉",
+					des: "使用梅花肉部位，口感酸甜，外酥內嫩，沒有骨頭，本店必買菜色。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_06.jpg",
+					name: "無錫排骨",
+					des: "使用上選活力豬腩排及天然辛香料以紅麴炆火慢燉煮而成，紅燒口味。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_07.jpg",
+					name: "珍珠丸子",
+					des: "精選活力豬絞肉，加入少許荸薺增加爽脆口感，糯米必須經過數小時浸泡十分費工，使用蔥薑調味。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_08.jpg",
+					name: "梅菜扣肉",
+					des: "選用台灣本地天然手工風乾醃製的客家梅干菜，香氣獨特豐富而不死鹹，梅干菜需手工流水逐次清洗至少六次以上，將其中的沙子及雜質清洗乾淨。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_09.jpg",
+					name: "富貴雙方",
+					des: "江浙名菜，使用較嫩的火腿，搭配素方餅，再以特製的麵包包覆、酥脆、綿密雙重口感的享受。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_10.jpg",
+					name: "醉豬腳",
+					des: "選用活力豬豬腳，並經過仔細的前置處理，再以紹興酒、紅露酒浸泡至入味，豬腳的膠質融合著酒香，清甜Ｑ彈，清爽入口。"
+				},{
+					pic: "images/homecooking/meat/homecooking_pic_11.jpg",
+					name: "醬肘子",
+					des: "選用帶骨活力豬前腳部位，用老滷汁燉煮，切開後，一層皮帶筋帶肉，不油不膩。"
+				},
+			];
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					dishes: dishdata
+				}
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('.topbtn').click(function(event) {
+					$('html,body').animate({scrollTop: 0}, 1000);
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>億長御坊</title>
+
+
+		<!-- 最新編譯和最佳化的 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- 最新編譯和最佳化的 JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+			.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		</style>
+		<script>
+				var title = "家的味道";
+				var title_temp = "{{num}}";
+				var title_html = title_temp.replace('{{num}}', title);
+				document.title = "億長御坊 - " + title_html;
+		</script>
+		<script>
+			var preloader = function(){
+				var img = new Image();
+				img.src="images/menuicon_ho.png";
+			}
+		</script>
+	</head>
+	<body onload="preloader()">
+		<div class="wrap">
+			<header>
+				<input id="check" type="checkbox">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<label for="check" class="menubtn">
+					<img src="images/menubtn.png" alt="">
+				</label>
+				<div class="top">
+					<p>
+						<span>家的記「億」，美味憶「長」</span>
+						第二屆傳統美食展第一名烹飪名師：「朱姐」朱億長老師親自監製
+					</p>
+					<div class="social">
+						<!-- <div class="language">
+							<a href="#">日本語</a>|<a href="#">ENGLISH</a>
+						</div> -->
+						<div class="socalicon">
+							<div class="yahoo">
+								<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon.png" alt=""></a>
+							</div>
+							<!-- <div class="facebook">
+								<a href="#"><img src="images/facebookicon.png" alt=""></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="menu">
+						<ul>
+							<li><a href="brandstory.html">品牌故事</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="homecooking.html">家的味道</a></li>
+							<li><a href="festival.html">節慶美味</a></li>
+							<li><a href="report.html">媒體報導</a></li>
+							<li><a href="store.html">門市資訊</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<nav>
+					<ul>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+								<span class="dropmenu">饅頭包點</span>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li><a href="homecooking.html">招牌推薦</a></li>
+								<li><a href="homecooking02.html">肉類菜色</a></li>
+								<li><a href="homecooking03.html">家禽類菜色</a></li>
+								<li><a href="homecooking04.html">海鮮類菜色</a></li>
+								<li><a href="homecooking05.html">素食</a></li>
+								<li><a href="homecooking06.html">涼拌菜</a></li>
+								<li><a href="homecooking07.html">精緻小菜</a></li>
+								<li><a href="homecooking08.html">湯品</a></li>
+								<li><a href="homecooking09.html">點心糕點</a></li>
+								<li><a href="homecooking10.html">饅頭包點</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div id="app" class="maincontent dishbg">
+					<div class="title">
+						家的味道<span>饅頭包點</span>
+					</div>
+					<div class="yahoo_mo">
+						<a href="http://tw.mall.yahoo.com/store/ycyf" target="_blank"><img src="images/yahooicon_mo.png" alt=""></a>
+					</div>
+					<div class="dish">
+						<div v-for="dish in dishes" class="dishbox">
+							<div class="dishpic">
+								<img :src="dish.pic" alt="">
+							</div>
+							<div class="title">
+								{{dish.name}}
+							</div>
+							<div class="description">
+								{{dish.des}}
+							</div>
+						</div>
+					</div>
+					<div class="topbtn">
+						回最上
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="copyright">
+					©億長御坊 / 富澄御坊股份有限公司 <span></span>All Right Reserved.
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.2/vue.min.js"></script>
+		<script>
+			var dishdata = [
+				{
+					pic: "images/homecooking/steamed_bread/homecooking_pic_01.jpg",
+					name: "黑芝麻堅果饅頭（素）",
+					des: "純手工製成，吃起來棉軟鬆Q，且黑汁麻的維生素E居植物性食品之首，有養血氣，烏髮等效用。"
+				},{
+					pic: "images/homecooking/steamed_bread/homecooking_pic_02.jpg",
+					name: "原味螺絲卷（素）",
+					des: "純手工捲製，不添加人工香精散發出天然的奶香味，大人小孩最佳點心選擇。"
+				},{
+					pic: "images/homecooking/steamed_bread/homecooking_pic_03.jpg",
+					name: "南瓜螺絲卷（素）",
+					des: "純手工捲製，不添加人工香精及色素有著天然奶香及南瓜原料製成，口感Q軟。"
+				},{
+					pic: "images/homecooking/steamed_bread/homecooking_pic_04.jpg",
+					name: "芋頭螺絲卷（素）",
+					des: "嚴選台灣本土芋頭在搭配些許的紫薯，以純手工捲製而成，堅持不添加人工香精、色素，有者天然的奶香及芋頭的香氣。"
+				},{
+					pic: "images/homecooking/steamed_bread/homecooking_pic_05.jpg",
+					name: "銀絲卷",
+					des: "純手工製成，黃色的銀絲與天然的南瓜原料製成，不添加人工香精及色素，健康有飽足感，當早餐或點心都十分合適。大人小孩都愛。"
+				},{
+					pic: "images/homecooking/steamed_bread/homecooking_pic_06.jpg",
+					name: "蔥花捲",
+					des: "選用台灣宜蘭三星蔥製作，純手工層層鋪上香蔥捲製，簡單調味，散發出天然的蔥香、麵粉的麥香。"
+				},{
+					pic: "images/homecooking/steamed_bread/homecooking_pic_07.jpg",
+					name: "亞麻仁籽麥饅頭",
+					des: "純手工製作，採用亞麻仁籽和麥，有種粗食的口感，十分富含營養價值"
+				}
+
+			];
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					dishes: dishdata
+				}
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('.topbtn').click(function(event) {
+					$('html,body').animate({scrollTop: 0}, 1000);
+				});
+			});
+		</script>
+	</body>
+</html>

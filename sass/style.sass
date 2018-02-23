@@ -1,0 +1,1098 @@
+@charset "UTF-8"
+@import "compass/css3"
+
+*
+	font-family: 'NotoSerifCJKtc', serif !important
+	font-weight: bold !important
+.loadanimate
+	height: 100vh
+	width: 100%
+	background-color: #fff
+	position: fixed
+	z-index: 99999
+	left: 0
+	top: 0
+	+display-flex
+	justify-content: center
+	align-items: center
+.loader
+	color: #000
+	font-size: 90px
+	text-indent: -9999em
+	overflow: hidden
+	width: 1em
+	height: 1em
+	border-radius: 50%
+	margin: 72px auto
+	position: relative
+	-webkit-transform: translateZ(0)
+	-ms-transform: translateZ(0)
+	transform: translateZ(0)
+	-webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease
+	animation: load6 1.7s infinite ease, round 1.7s infinite ease
+
+@-webkit-keyframes load6
+	0%
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em
+
+	5%,
+	95%
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em
+
+	10%,
+	59%
+		box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em
+
+	20%
+		box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em
+
+	38%
+		box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em
+
+	100%
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em
+
+
+@keyframes load6
+	0%
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em
+
+	5%,
+	95%
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em
+
+	10%,
+	59%
+		box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em
+
+	20%
+		box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em
+
+	38%
+		box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em
+
+	100%
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em
+
+
+@-webkit-keyframes round
+	0%
+		-webkit-transform: rotate(0deg)
+		transform: rotate(0deg)
+
+	100%
+		-webkit-transform: rotate(360deg)
+		transform: rotate(360deg)
+
+
+@keyframes round
+	0%
+		-webkit-transform: rotate(0deg)
+		transform: rotate(0deg)
+
+	100%
+		-webkit-transform: rotate(360deg)
+		transform: rotate(360deg)
+body
+	background-color: #340C4C
+	margin: auto
+	position: relative
+	
+	.bigmap
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 99
+		width: 100%
+		height: 100vh
+		z-index: 99999
+		background-color: rgba(0,0,0,0.5)
+		display: none
+		.layout
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 99
+			width: 100%
+			height: 100vh
+			background-color: rgba(0,0,0,0.5)
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			-webkit-transform: translate(-50%, -50%)
+			-moz-transform: translate(-50%, -50%)
+			-ms-transform: translate(-50%, -50%)
+			-o-transform: translate(-50%, -50%)
+			transform: translate(-50%, -50%)
+			z-index: 99999
+			max-width: 100%
+
+.main
+	footer
+		display: none
+		
+
+.wrap
+	max-width: 1280px
+	margin: auto
+	background-image: url("../images/bg.jpg")
+	position: relative
+
+	&:after
+		content: url("../images/footerbg.png")
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		overflow: hidden
+
+
+.main
+	&:after
+		content: ""
+
+header
+	position: relative
+	background: -moz-linear-gradient(90deg, #440061 0, #88296F 25%, #E95377 85%, #E95377 100%) /* FF3.6+ */
+	background: -webkit-gradient(linear, 90deg, color-stop(0, 440061), color-stop(25%, 88296F), color-stop(85%, E95377), color-stop(100%, E95377)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(90deg, #440061 0, #88296F 25%, #E95377 85%, #E95377 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(90deg, #440061 0, #88296F 25%, #E95377 85%, #E95377 100%) /* Opera 11.10+ */
+	background: -ms-linear-gradient(90deg, #440061 0, #88296F 25%, #E95377 85%, #E95377 100%) /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1')  /* for IE */
+	background: linear-gradient(90deg, #440061 0, #88296F 25%, #E95377 85%, #E95377 100%) /* W3C */
+
+	.logo
+		position: absolute
+		top: 50%
+		left: 50px
+		-webkit-transform: translateY(-50%)
+		-moz-transform: translateY(-50%)
+		-ms-transform: translateY(-50%)
+		-o-transform: translateY(-50%)
+		transform: translateY(-50%)
+		z-index: 999
+	.menubtn
+		display: none
+	#check
+		display: none
+	
+	.top
+
+		height: 143px
+		padding: 0 50px
+		display: -webkit-flex
+		+display-flex
+		align-items: flex-end
+		flex-direction: column
+		&:before
+			content: ""
+			width: 100%
+			height: 100%
+			background: url(../images/headerbg.png)
+			position: absolute
+			left: 0
+			opacity: 0.5
+
+		p
+			color: #44187F
+			font-size: 12.5px
+			z-index: 99
+			margin-top: 20px
+			span
+				color: #FEFEFE
+				display: block
+				font-size: 29px
+				margin-bottom: 7px
+		.social
+			+display-flex
+			justify-content: flex-end
+			align-items: center
+			width: 377px
+			z-index: 99
+			margin-top: 11px
+			.language
+				a
+					color: #440061
+					&:first-child
+						margin-right: 24px
+					&:last-child
+						margin-left: 24px
+			.socalicon
+				+display-flex
+				margin-right: 5px
+				.yahoo
+					margin-right: 9px
+				img
+					display: block
+
+
+
+	.bottom
+		background-color: #920683
+		height: 38px
+		+display-flex
+		align-items: center
+		justify-content: flex-end
+		padding: 0 50px
+		position: relative
+		z-index: 99
+		+box-shadow(0px 5px 10px rgba(0,0,0,0.5))
+		.menu
+			ul
+				+display-flex
+				li
+					background: url(../images/dish.png)
+					margin: 0 15px
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0
+					a
+						text-decoration: none
+						color: #440061
+						background-size: cover
+						width: 83px
+						height: 83px
+						line-height: 83px
+						text-align: center
+						display: block
+					&:hover
+						-webkit-transform: rotate(180deg)
+						-moz-transform: rotate(180deg)
+						-ms-transform: rotate(180deg)
+						-o-transform: rotate(180deg)
+						transform: rotate(180deg)
+						a
+							-webkit-transform: rotate(180deg)
+							-moz-transform: rotate(180deg)
+							-ms-transform: rotate(180deg)
+							-o-transform: rotate(180deg)
+							transform: rotate(180deg)
+
+.content
+	+display-flex
+
+	nav
+		width: 310px
+		padding-left: 60px
+		position: relative
+		z-index: 9999
+		ul
+			margin-top: 55px
+			li
+				margin-bottom: 33px
+				
+				a
+					color: #3E3E3E
+					font-size: 23px
+					text-decoration: none
+					display: none
+					
+				ul.dropdown-menu
+					// position: static
+					display: block
+					float: none
+					background-color: initial
+					border: none
+					box-shadow: none
+					width: 100%
+					li
+						a
+							display: inline-block
+							padding: 0
+							&:hover
+								background-color: initial
+						&:before
+							content: url("../images/menuicon.png")
+							margin-right: 8px
+						&:hover
+							&:before
+								content: url("../images/menuicon_ho.png")
+	.desktop
+		display: block
+		img
+			width: 100%
+			display: block
+			
+	.mobile
+		display: none
+		margin: 0 -35px
+		img
+			width: 100%
+			display: block
+		
+	.brandsrightbg
+		background-image: url('../images/right_bg.png')
+	.eventsrightbg
+		background-image: url('../images/events_right_bg.png')
+	.maincontent
+		width: calc(100% - 310px)
+		background-repeat: no-repeat
+		background-position: right 70px
+		position: relative
+		z-index: 999
+		.topbtn
+			color: #E95377
+			cursor: pointer
+			margin-top: 10px
+		.titlecolumn
+			+display-flex
+			justify-content: space-between
+			align-items: center
+			max-width: 542px
+			position: relative
+			z-index: 99
+			.back
+				margin-top: 55px
+				margin-bottom: 30px
+				border-left: 1px solid #E95377
+				padding-left: 20px
+				a
+					color: #440061
+					text-decoration: none
+					line-height: 27px
+			.backto
+				margin-top: 55px
+				margin-bottom: 30px
+				+display-flex
+				.notic
+					line-height: 27px
+					margin-right: 20px
+					color: #440061
+					span
+						color: #E95377
+				a
+					color: #440061
+					text-decoration: none
+					line-height: 27px
+					border-left: 1px solid #E95377
+					padding-left: 20px
+		.yahoo_mo
+			display: none
+			
+
+		.contentbox
+			.events
+				border-left: 11px solid #440061
+				.year
+					+display-flex
+					align-items: center
+					margin-bottom: 25px
+					font-size: 22px
+					&:before
+						content: attr(data-year)
+						background-image: url(../images/yearbg_r.png)
+						width: 67px
+						height: 67px
+						line-height: 67px
+						text-align: center
+						color: #fff
+						margin-left: -39px
+						margin-right: 30px
+						font-size: 24px
+				.purplebg
+					&:before
+						background-image: url(../images/yearbg_p.png)
+		
+							
+		img
+			position: relative
+			z-index: 99
+			width: 100%
+			max-width: 539px
+			margin-bottom: 20px
+		.title
+			font-size: 33px
+			color: #440061
+			margin-top: 55px
+			margin-bottom: 30px
+			position: relative
+			z-index: 99
+			span
+				color: #E95377
+				font-size: 20px
+				&:before
+					content: "/"
+					color: #440061
+					margin: 0 9px
+		.articlearea
+			font-size: 14px
+			line-height: 28px
+			max-width: 542px
+			h3.title
+				margin-top: 30px
+				margin-bottom: 10px
+				font-size: 22px
+		.news
+			.newsarea
+				.date
+					color: #920683
+					line-height: 28px
+				.newstitle
+					line-height: 28px
+					span
+						a
+							color: #E95377
+		.news_detail
+			max-width: 542px
+			.date
+				font-size: 18px
+				color: #920683
+				margin-top: 55px
+				margin-bottom: 15px
+			.title
+				font-size: 36px
+				color: #440061
+				margin: 0
+				margin-bottom: 10px
+			.newscontent
+				font-size: 14px
+				line-height: 28px
+
+		.filmbox
+			position: relative
+			z-index: 99
+			.film
+				max-width: 540px
+				width: 100%
+				margin-bottom: 35px
+				.description
+					font-size: 17px
+					color: #920683
+					margin-bottom: 10px
+		.storeinfo
+			position: relative
+			z-index: 99
+			margin-left: 80px
+
+			.storeinfoarea
+				margin-top: 20px
+				margin-bottom: 30px
+				max-width: 542px
+				.storeinfobox
+					+display-flex
+					background-color: rgba(220,220,221,0.6)
+					width: 100%
+					padding: 6px
+					margin-bottom: 10px
+					.storepic
+						img
+							width: 204px
+					.storecontactinfo
+						padding: 0px 8px 0px 14px
+						width: 100%
+						.topcolumn
+							+display-flex
+							justify-content: space-between
+							margin-top: 5px
+							.title
+								margin: 0
+								font-size: 23px
+							.map
+								cursor: pointer
+								width: 15%
+								
+						.bottomcolumn
+							margin-top: 2px
+							.add,.time,.tel
+								color: #440061
+								margin-bottom: 12px
+								&:before
+									display: inline-block
+									vertical-align: top
+
+								span
+									display: block
+									color: #DA526B
+									margin-bottom: 3px
+							.add
+								&:before
+									content: url("../images/addicon.png")
+							.time
+								&:before
+									content: url("../images/timeicon.png")
+							.tel
+								margin: 0
+								&:before
+									content: url("../images/telicon.png")
+								span
+									display: block
+							.info
+								width: calc(100% - 20px)
+								display: inline-block
+
+			.topbtn
+				color: #E95377
+				cursor: pointer
+		.dish
+			position: relative
+			z-index: 99
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-wrap: wrap
+			width: 100%
+			.dishbox
+				width: calc((100% - 24px) / 3)
+				background-color: #F4E8CF
+				padding: 8px
+				margin-bottom: 8px
+				&:nth-child(3n+2)
+					margin: 0 12px 8px
+				.dishpic
+					img
+						width: 100%
+				.title
+					color: #440061
+					margin: 14px 0px 6px
+					font-size: 22px
+				.description
+					line-height: 25px
+					font-family: 微軟正黑體 !important
+					font-size: 14px
+
+	.store
+		background-image: url('../images/store_right_bg.png')
+	.dishbg
+		background-image: none
+		padding-right: 45px
+	.contact
+		max-width: 542px
+		.single
+			+display-flex
+			align-items: center
+			font-size: 16px
+			margin-bottom: 16px
+			.item
+				width: 85px
+				color: #440061
+				.require
+					color: #E95377
+			input
+				width: 143px
+				height: 22px
+				border: 1px solid #B4B5B5
+			svg
+				width: 11px
+				height: 13px
+				margin-right: 10px
+		.inputarea
+			justify-content: space-between
+			.between
+				+display-flex
+				align-items: center
+				
+		.full
+			input
+				width: calc(100% - 106px)
+		.text
+			.item
+				// width: 85px
+				display: inline-block
+				color: #440061
+				margin-bottom: 15px
+				margin-right: 10px
+			svg
+				width: 11px
+				height: 13px
+				display: inline-block
+				margin-right: 10px
+			textarea
+				display: block
+				width: 100%
+				border: 1px solid #B4B5B5
+		.btnarea
+			+display-flex
+			justify-content: center
+			margin-top: 10px
+			button
+				padding: 0
+				margin: 0 23px
+				border-width: 0px
+				background-color: transparent
+
+				img
+					margin: 0
+					display: block
+	.privacycontent
+		font-size: 14px
+		color: #221814
+		line-height: 28px
+		max-width: 542px
+		h3.title
+			font-size: 14px
+			color: #920683
+			margin: 0
+		span.area
+			color: #E95377
+			display: block
+			
+				
+footer
+	position: relative
+	z-index: 99
+	.copyright
+		color: #9F9FA0
+		line-height: 64px
+		text-align: center
+
+@media only screen and (max-width: 1140px)
+	header
+		.logo
+			left: 50%
+			-webkit-transform: translate(-50%,-50%)
+			-moz-transform: translate(-50%,-50%)
+			-ms-transform: translate(-50%,-50%)
+			-o-transform: translate(-50%,-50%)
+			transform: translate(-50%,-50%)
+			width: 125px
+			img
+				width: 100%
+		.menubtn
+			position: absolute
+			right: 10px
+			top: 50%
+			-webkit-transform: translateY(-50%)
+			-moz-transform: translateY(-50%)
+			-ms-transform: translateY(-50%)
+			-o-transform: translateY(-50%)
+			transform: translateY(-50%)
+			cursor: pointer
+			z-index: 99999999
+			display: block
+			
+			img
+				z-index: 999
+				display: block
+				
+		.top
+			height: 70px		
+			*
+				display: none
+				
+		.bottom
+			height: 10px
+			padding: 0
+			z-index: 99
+			.menu
+				display: none
+				width: 100%
+				position: absolute
+				top: 100%
+				left: 0
+				background: #fff
+
+				ul
+					flex-wrap: wrap
+					background: -moz-linear-gradient(0deg, #a281b1 0, #440061 70%) /* FF3.6+ */
+					background: -webkit-gradient(linear, 0deg, color-stop(0, #a281b1), color-stop(70%, 440061)) /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(0deg, #a281b1 0, #440061 70%) /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(0deg, #a281b1 0, #440061 70%) /* Opera 11.10+ */
+					background: -ms-linear-gradient(0deg, #a281b1 0, #440061 70%) /* IE10+ */
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1')  /* for IE */
+					background: linear-gradient(0deg, #a281b1 0, #440061 70%) /* W3C */
+					padding: 0 45px
+					li
+						background: none
+						width: 50%
+						margin: 0
+						a
+							width: 100%
+							color: #fff
+							font-size: 18px
+
+		#check:checked
+			~ .logo
+				z-index: 999999
+			~ .bottom
+				z-index: 99999
+				.menu
+					display: block
+	.content
+		.maincontent
+			.dish
+				.dishbox
+					width: calc((100% - 24px) / 2)
+					background-color: #F4E8CF
+					padding: 8px
+					&:nth-child(3n+2)
+						margin: 0
+					&:nth-child(odd)
+						margin-right: 12px
+						margin-bottom: 8px
+					&:nth-child(even)
+						margin-left: 12px
+						margin-bottom: 8px
+			.storeinfo
+				margin: 0
+			
+
+@media only screen and (max-width: 768px)
+
+	.content
+		+display-flex
+		flex-direction: column
+		margin: 0 35px 30px
+		nav
+			width: 100%
+			padding-left: 0px
+			ul
+				margin-bottom: 35px
+				
+				li
+					margin-bottom: 0px
+					position: relative
+					
+					a
+						color: #3E3E3E
+						font-size: 23px
+						text-decoration: none
+						display: block
+						width: 100%
+						height: 27px
+						text-align: right
+						background-color: #9F9FA0
+						border-radius: 3px
+						span.dropmenu
+							font-size: 18px
+							display: inline-block
+							width: calc(100% - 35px)
+							text-align: left
+							padding-left: 15px
+							line-height: 27px
+
+						.caret
+							border-top: 15px solid
+							border-right: 9px solid transparent
+							border-left: 9px solid transparent
+							margin-left: 0
+							margin-right: 10px
+							vertical-align: initial
+					ul.dropdown-menu
+						display: none
+						margin-top: 0px
+						padding: 30px 20px 0px
+						background-color: #fff
+						li
+							margin-bottom: 35px
+							&:before
+								content: url("../images/menuicon.png")
+								margin-right: 8px
+							&:hover
+								&:before
+									content: url("../images/menuicon_ho.png")
+							a
+								text-align: left
+								width: calc(100% - 50px)
+								background-color: initial
+				.open
+					ul.dropdown-menu
+						display: block
+		.desktop
+			display: none
+		.mobile
+			display: block
+
+		.brandsrightbg,.eventsrightbg
+			background-image: none
+		.maincontent
+			width: 100%
+			background-repeat: no-repeat
+			background-position: right 70px
+			position: relative
+			z-index: 999
+			.yahoo_mo
+				display: block
+				img
+					max-width: 100%
+					width: initial
+			.titlecolumn
+				+display-flex
+				justify-content: space-between
+				align-items: flex-start
+				flex-direction: column
+				width: 100%
+				position: relative
+				z-index: 99
+				.back
+					margin-top: 0px
+					margin-bottom: 30px
+					border-left: 1px solid #E95377
+					padding-left: 20px
+					a
+						color: #440061
+						text-decoration: none
+						line-height: 27px
+				.backto
+					margin-top: 0px
+					margin-bottom: 30px
+					+display-flex
+
+					.notic
+						line-height: 27px
+						margin-right: 20px
+						color: #440061
+						span
+							color: #E95377
+					a
+						color: #440061
+						text-decoration: none
+						line-height: 27px
+						border-left: 1px solid #E95377
+						padding-left: 20px
+			.contentbox
+				.events
+					margin-left: 28px
+					border-left-width: 8px
+					margin-bottom: 20px
+					.year
+						font-size: 17px
+						&:before
+							font-size: 19px
+							width: 53px
+							height: 53px
+							-webkit-background-size: cover
+							-moz-background-size: cover
+							background-size: cover
+							margin-left: -30px
+							margin-right: 23px
+							line-height: 53px
+						.item
+							width: calc(100% - 50px)
+							
+
+
+			img
+				position: relative
+				z-index: 99
+				width: 100%
+				max-width: 539px
+				display: block
+				margin: auto
+				margin-bottom: 20px
+			.title
+				font-size: 28px
+				color: #440061
+				margin-top: 0px
+				margin-bottom: 30px
+				position: relative
+				z-index: 99
+				span
+					color: #E95377
+					font-size: 20px
+					&:before
+						content: "/"
+						color: #440061
+						margin: 0 9px
+			.articlearea
+				max-width: none
+				text-align: justify
+				
+				h3.title
+					margin-top: 30px
+					margin-bottom: 10px
+			.filmbox
+				position: relative
+				z-index: 99
+			.storeinfo
+				position: relative
+				z-index: 99
+				margin-left: 0px
+
+				.storeinfoarea
+					margin-top: 20px
+					margin-bottom: 30px
+					.storeinfobox
+						+display-flex
+						background-color: rgba(220,220,221,0.6)
+						width: 100%
+						padding: 6px
+						margin-bottom: 10px
+						.storepic
+							width: 50%
+							img
+								width: 100%
+						.storecontactinfo
+							padding: 0px 8px 0px 14px
+							width: 50%
+							.topcolumn
+								+display-flex
+								justify-content: space-between
+								margin-top: 5px
+								.title
+									font-size: 19px
+								.map
+									cursor: pointer
+									
+							.bottomcolumn
+								margin-top: 2px
+								.add,.time,.tel
+									color: #440061
+									margin-bottom: 12px
+									+display-flex
+									&:before
+										margin-right: 5px
+
+									span
+										font-size: 11px
+								.add
+									&:before
+										content: url("../images/addicon.png")
+								.time
+									&:before
+										content: url("../images/timeicon.png")
+								.tel
+									margin: 0
+									&:before
+										content: url("../images/telicon.png")
+									span
+										display: block
+								.info
+									width: calc(100% - 20px)
+
+				.topbtn
+					color: #E95377
+					cursor: pointer
+			.dish
+				.dishbox
+					width: calc((100% - 24px) / 2)
+					background-color: #F4E8CF
+					padding: 8px
+					
+					&:nth-child(3n+2)
+						margin: 0
+					&:nth-child(odd)
+						margin-right: 12px
+						margin-bottom: 8px
+					&:nth-child(even)
+						margin-left: 12px
+						margin-bottom: 8px
+					
+					.dishpic
+						img
+							width: 100%
+					.title
+						color: #440061
+						margin: 14px 0px 6px
+						font-size: 22px
+					.description
+						line-height: 25px
+						font-family: 微軟正黑體 !important
+						font-size: 14px
+
+		.store
+			background-image: none
+		.dishbg
+			background-image: none
+			padding-right: 0
+		.contact
+			max-width: 542px
+			.single
+				+display-flex
+				align-items: center
+				font-size: 16px
+				margin-bottom: 16px
+				.item
+					width: 85px
+					color: #440061
+					.require
+						color: #E95377
+				input
+					width: calc(100% - 106px)
+					height: 22px
+					border: 1px solid #B4B5B5
+				svg
+					width: 11px
+					height: 13px
+					margin-right: 10px
+			.inputarea
+				justify-content: space-between
+				flex-direction: column
+				margin: 0
+				.between
+					+display-flex
+					width: 100%
+					align-items: center
+					margin-bottom: 16px
+					input
+						width: calc(100% - 106px)
+					
+			.full
+				input
+					width: calc(100% - 106px)
+			.text
+				.item
+					// width: 85px
+					display: inline-block
+					color: #440061
+					margin-bottom: 15px
+					margin-right: 10px
+				svg
+					width: 11px
+					height: 13px
+					display: inline-block
+					margin-right: 10px
+				textarea
+					display: block
+					width: 100%
+					border: 1px solid #B4B5B5
+			.btnarea
+				+display-flex
+				justify-content: center
+				margin-top: 10px
+				button
+					padding: 0
+					margin: 0 23px
+					border-width: 0px
+					background-color: transparent
+
+					img
+						margin: 0
+						display: block
+	.main
+		.content
+			margin-bottom: 0
+		footer
+			display: block
+			
+
+	footer
+		.copyright
+			background-color: #920683
+			line-height: 40px
+			color: #fff
+			font-size: 12px
+
+@media only screen and (max-width: 481px)
+	.content
+		.maincontent
+			.dish
+				.dishbox
+					width: 100%
+					background-color: #F4E8CF
+					padding: 8px
+					&:nth-child(odd)
+						margin: 0
+						margin-bottom: 8px
+					&:nth-child(even)
+						margin: 0
+						margin-bottom: 8px
+			.storeinfo
+				.storeinfoarea
+					.storeinfobox
+						flex-direction: column
+						.storepic
+							width: 100%
+							margin-bottom: 10px
+						.storecontactinfo
+							width: 100%
+	footer
+		.copyright
+			line-height: 18px
+			padding: 10px 0
+			span
+				display: block
+				
